@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 5981497660728530785}
   - component: {fileID: 3527555491255523586}
   - component: {fileID: 3683860926281556716}
+  - component: {fileID: 1978929651}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -100,7 +101,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 87f8f927753e0fd45bb6fd0ff3d363e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -170,9 +171,9 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: -300
+    targetVelocity: 0
     force: 130
-    freeSpin: 0
+    freeSpin: 1
   m_UseLimits: 0
   m_Limits:
     min: 0
@@ -205,9 +206,9 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: 300
+    targetVelocity: 0
     force: 130
-    freeSpin: 0
+    freeSpin: 1
   m_UseLimits: 0
   m_Limits:
     min: 0
@@ -238,11 +239,11 @@ HingeJoint:
     spring: 0
     damper: 0
     targetPosition: 0
-  m_UseMotor: 1
+  m_UseMotor: 0
   m_Motor:
-    targetVelocity: 300
+    targetVelocity: 0
     force: 130
-    freeSpin: 0
+    freeSpin: 1
   m_UseLimits: 0
   m_Limits:
     min: 0
@@ -267,7 +268,7 @@ HingeJoint:
   m_Anchor: {x: 0.8, y: 0, z: -0.38}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.010000229, y: 1.0000001, z: 0}
+  m_ConnectedAnchor: {x: -0.010000229, y: 1.5000002, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -275,9 +276,9 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: -300
+    targetVelocity: 0
     force: 130
-    freeSpin: 0
+    freeSpin: 1
   m_UseLimits: 0
   m_Limits:
     min: 0
@@ -291,6 +292,23 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1978929651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9111144138530118983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e2012b7f40ee346b69313f8235a2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frontRight: {fileID: 6877229050747276571}
+  frontLeft: {fileID: 5981497660728530785}
+  backRight: {fileID: 3683860926281556716}
+  backLeft: {fileID: 3527555491255523586}
+  Rotation: {x: 0, y: 100, z: 0}
 --- !u!1001 &2077091638047614936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -513,7 +531,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalPosition.y
