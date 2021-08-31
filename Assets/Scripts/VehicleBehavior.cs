@@ -9,7 +9,7 @@ public class VehicleBehavior : MonoBehaviour
     public HingeJoint backRight;
     public HingeJoint backLeft;
     public Vector3 Rotation;
-    private void FixedUpdate()
+    private void Update()
     {
         //Forward and Backwards
         if(Input.GetKeyDown(KeyCode.UpArrow))
