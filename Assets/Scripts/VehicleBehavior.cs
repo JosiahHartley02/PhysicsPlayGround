@@ -28,9 +28,11 @@ public class VehicleBehavior : MonoBehaviour
             JointMotor rightmotor = frontRight.motor;
             rightmotor.targetVelocity += 10;
             frontRight.motor = rightmotor;
+            backRight.motor = rightmotor;
             JointMotor leftmotor = frontLeft.motor;
             leftmotor.targetVelocity -= 10;
             frontLeft.motor = leftmotor;
+            backLeft.motor = leftmotor;
         }
 
         //Steering
