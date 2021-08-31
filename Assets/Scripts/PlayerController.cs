@@ -27,17 +27,19 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         //Get WASD Input
-        _desiredVelocity.x = Input.GetAxis("Horizontal");
-        _desiredVelocity.y = 0.0f;
-        _desiredVelocity.z = Input.GetAxis("Vertical");
+        float InputRight = Input.GetAxis("Horizontal");
+        float InputForward = Input.GetAxis("Vertical");
 
         //Get camera forward
         Vector3 cameraForward = playerCamera.transform.forward;
         cameraForward.y = 0;
         cameraForward.Normalize();
+
         //Get Camera Right
         Vector3 cameraRight = playerCamera.transform.right;
-        _desiredVelocity = (_desiredVelocity.x * cameraRight + _desiredVelocity.z * cameraForward);
+
+        //Find the desired Velocity
+        _desiredVelocity = ((InputRight * cameraRight) + (InputForward * cameraForward));
 
         //Get jump input
         _isJumpDesired = Input.GetButton("Jump");
