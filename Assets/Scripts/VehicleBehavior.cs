@@ -12,7 +12,7 @@ public class VehicleBehavior : MonoBehaviour
     private void Update()
     {
         //Forward and Backwards
-        if(Input.GetKeyDown(KeyCode.UpArrow))
+        if(Input.GetKey(KeyCode.UpArrow))
         {
             JointMotor rightmotor = frontRight.motor;
             rightmotor.targetVelocity -= 10;
@@ -23,7 +23,7 @@ public class VehicleBehavior : MonoBehaviour
             frontLeft.motor = leftmotor;
             backLeft.motor = leftmotor;
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.DownArrow))
         {
             JointMotor rightmotor = frontRight.motor;
             rightmotor.targetVelocity += 10;
