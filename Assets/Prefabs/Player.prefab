@@ -145,3 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  jumpstrength: 7
+  airControl: 1
+  gravityModifier: 1
+  playerCamera: {fileID: 0}
+  _isGrounded: 0
