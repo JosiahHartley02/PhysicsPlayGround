@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Transform target;
-    public float maxDistance = 5.0f;
+    public float desiredDistance = 5.0f;
     public float sensitivity = 2.0f;
     public float relaxSpeed = 5.0f;
     public bool invertY = false;
@@ -15,10 +15,11 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        currentDistance = maxDistance;
+        currentDistance = desiredDistance;
     }
     private void Update()
     {
+        desiredDistance -= Input.GetAxis("Mouse ScrollWheel");
         //Rotate the camera
         if(Input.GetMouseButton(1))
         {
@@ -37,12 +38,12 @@ public class CameraController : MonoBehaviour
         }
         //Move the camera
         RaycastHit hitInfo;
-        if (Physics.Raycast(target.position, -transform.forward, out hitInfo, maxDistance))
+        if (Physics.Raycast(target.position, -transform.forward, out hitInfo, desiredDistance))
         {
-            currentDistance = Mathf.MoveTowards(currentDistance, hitInfo.distance, Time.deltaTime * relaxSpeed * (maxDistance / currentDistance));
+            currentDistance = Mathf.MoveTowards(currentDistance, hitInfo.distance, Time.deltaTime * relaxSpeed * (desiredDistance / currentDistance));
         }
         else
-            currentDistance = Mathf.MoveTowards(currentDistance, maxDistance, Time.deltaTime * relaxSpeed * (maxDistance/ currentDistance));
+            currentDistance = Mathf.MoveTowards(currentDistance, desiredDistance, Time.deltaTime * relaxSpeed * (desiredDistance/ currentDistance));
         
         transform.position = target.position + (currentDistance * -transform.forward);
     }
