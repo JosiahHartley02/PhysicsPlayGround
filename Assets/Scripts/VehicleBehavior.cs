@@ -8,34 +8,45 @@ public class VehicleBehavior : MonoBehaviour
     public HingeJoint frontLeft;
     public HingeJoint backRight;
     public HingeJoint backLeft;
-    public Vector3 Rotation;
     private void Update()
     {
         //Forward and Backwards
         if(Input.GetKey(KeyCode.UpArrow))
         {
             JointMotor rightmotor = frontRight.motor;
-            rightmotor.targetVelocity -= 10;
+            rightmotor.targetVelocity -= 1;
             frontRight.motor = rightmotor;
             backRight.motor = rightmotor;
             JointMotor leftmotor = frontLeft.motor;
-            leftmotor.targetVelocity += 10;
+            leftmotor.targetVelocity += 1;
             frontLeft.motor = leftmotor;
             backLeft.motor = leftmotor;
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
             JointMotor rightmotor = frontRight.motor;
-            rightmotor.targetVelocity += 10;
+            rightmotor.targetVelocity += 1;
             frontRight.motor = rightmotor;
             backRight.motor = rightmotor;
             JointMotor leftmotor = frontLeft.motor;
-            leftmotor.targetVelocity -= 10;
+            leftmotor.targetVelocity -= 1;
             frontLeft.motor = leftmotor;
             backLeft.motor = leftmotor;
         }
 
-        //Steering
-
+        if(Input.GetKey(KeyCode.LeftArrow))
+        {
+            JointMotor rightmotor = frontRight.motor;
+            rightmotor.targetVelocity -= 1;
+            frontRight.motor = rightmotor;
+            backRight.motor = rightmotor;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            JointMotor leftmotor = frontLeft.motor;
+            leftmotor.targetVelocity += 1;
+            frontLeft.motor = leftmotor;
+            backLeft.motor = leftmotor;
+        }
     }
 }
