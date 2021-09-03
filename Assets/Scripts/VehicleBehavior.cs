@@ -7,51 +7,40 @@ public class VehicleBehavior : MonoBehaviour
     [SerializeField]
     public bool activePlayer = false;
 
-    public HingeJoint frontRight;
-    public HingeJoint frontLeft;
-    public HingeJoint backRight;
-    public HingeJoint backLeft;
+    public HingeJoint frontRightWheel;
+    public HingeJoint frontLeftWheel;
+    public HingeJoint backRightWheel;
+    public HingeJoint backLeftWheel;
+
+    private JointMotor frontRightMotor;
+    private JointMotor frontLeftMotor;
+    private JointMotor backRightMotor;
+    private JointMotor backLeftMotor;
+
     private void Update()
     {
         if (!activePlayer)
             return;
-        //Forward and Backwards
-        if(Input.GetKey(KeyCode.UpArrow))
-        {
-            JointMotor rightmotor = frontRight.motor;
-            rightmotor.targetVelocity -= 1;
-            frontRight.motor = rightmotor;
-            backRight.motor = rightmotor;
-            JointMotor leftmotor = frontLeft.motor;
-            leftmotor.targetVelocity += 1;
-            frontLeft.motor = leftmotor;
-            backLeft.motor = leftmotor;
-        }
-        else if (Input.GetKey(KeyCode.DownArrow))
-        {
-            JointMotor rightmotor = frontRight.motor;
-            rightmotor.targetVelocity += 1;
-            frontRight.motor = rightmotor;
-            backRight.motor = rightmotor;
-            JointMotor leftmotor = frontLeft.motor;
-            leftmotor.targetVelocity -= 1;
-            frontLeft.motor = leftmotor;
-            backLeft.motor = leftmotor;
-        }
+        //Getting a reference to a modifyable value for the motors
+        frontRightMotor = frontRightWheel.motor;
+        frontLeftMotor = frontLeftWheel.motor;
+        backRightMotor = backRightWheel.motor;
+        backLeftMotor = backLeftWheel.motor;
+        
+        float InputRight = Input.GetAxis("Horizontal");
+        float InputForward = Input.GetAxis("Vertical");
 
-        if(Input.GetKey(KeyCode.LeftArrow))
-        {
-            JointMotor rightmotor = frontRight.motor;
-            rightmotor.targetVelocity -= 1;
-            frontRight.motor = rightmotor;
-            backRight.motor = rightmotor;
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            JointMotor leftmotor = frontLeft.motor;
-            leftmotor.targetVelocity += 1;
-            frontLeft.motor = leftmotor;
-            backLeft.motor = leftmotor;
-        }
+
+        //Uniform 4 wheel drive acceleration and decceleration
+        frontRightMotor.targetVelocity -= InputForward;
+        backRightMotor.targetVelocity -= InputForward;
+        frontLeftMotor.targetVelocity += InputForward;
+        backLeftMotor.targetVelocity += InputForward;
+
+        //Applying modified values to motors on the hinges
+        frontRightWheel.motor = frontRightMotor;
+        frontLeftWheel.motor = frontLeftMotor;
+        backRightWheel.motor = backRightMotor;
+        backLeftWheel.motor = backLeftMotor;
     }
 }

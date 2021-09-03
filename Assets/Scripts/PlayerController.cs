@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _controller = GetComponent<CharacterController>();
-        Application.targetFrameRate = default;
     }
 
     private void Update()
@@ -45,7 +44,7 @@ public class PlayerController : MonoBehaviour
             //cast a ray to see what the player clicked on
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, 100) && hitInfo.transform.gameObject.tag == "Player")
+            if (Physics.Raycast(ray, out hitInfo, 100) && hitInfo.transform.gameObject.tag == "Vehicle")
             {
                 activePlayer = false;
                 VehicleBehavior vehicle = hitInfo.transform.gameObject.GetComponent<VehicleBehavior>();
