@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
+    public bool activePlayer = true;
+
     public float speed = 5;
     public float jumpstrength = 7.0f;
     public float airControl = 1.0f;
@@ -30,6 +33,13 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (!activePlayer)
+        {
+            _animator.enabled = false;
+            return;
+        }
+        else
+            _animator.enabled = true;
         //Get WASD Input
         float InputRight = Input.GetAxis("Horizontal");
         float InputForward = Input.GetAxis("Vertical");

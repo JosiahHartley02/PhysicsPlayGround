@@ -192,12 +192,92 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 181836299, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.20427662
+      objectReference: {fileID: 0}
+    - target: {fileID: 181836299, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.037550222
+      objectReference: {fileID: 0}
+    - target: {fileID: 387067791, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.0020786463
+      objectReference: {fileID: 0}
+    - target: {fileID: 749436912, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.0080040125
+      objectReference: {fileID: 0}
+    - target: {fileID: 749436912, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.018232856
+      objectReference: {fileID: 0}
+    - target: {fileID: 786824515, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.03755023
+      objectReference: {fileID: 0}
+    - target: {fileID: 979559771, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.0020786463
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461413947, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.23377755
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461413947, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.000008517631
+      objectReference: {fileID: 0}
+    - target: {fileID: 1461413947, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.0000064381397
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536613316, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.23377922
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536613316, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.000008543676
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536613316, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.000007187261
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717690886, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.35179895
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717690886, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.008004635
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721701881, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.040180746
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943505752, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.017736083
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949023280, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_TagString
+      value: CameraFocusPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949023280, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_Name
+      value: PlayerCameraFocus
+      objectReference: {fileID: 0}
     - target: {fileID: 6207709833248221353, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 963194227}
     - target: {fileID: 6602492272913546364, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602492272913546364, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6661027900746710867, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
@@ -246,6 +326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+--- !u!1 &343351329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9111144138530118983, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+  m_PrefabInstance: {fileID: 1483731054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,8 +494,8 @@ GameObject:
   m_Component:
   - component: {fileID: 858830939}
   m_Layer: 0
-  m_Name: CameraFocus
-  m_TagString: Untagged
+  m_Name: VehicleCameraFocus
+  m_TagString: CameraFocusPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -621,12 +706,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433198178df9a6249b0db76bcf0f14c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1259709545}
+  target:
+  - {fileID: 1259709545}
+  - {fileID: 858830939}
+  targetChecks:
+  - {fileID: 1017854296}
+  - {fileID: 343351329}
   desiredDistance: 5
   sensitivity: 2
   relaxSpeed: 5
   invertY: 0
   invertX: 0
+--- !u!1 &1017854296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6602492272913546364, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+  m_PrefabInstance: {fileID: 215461633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1259709545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1949023281, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
@@ -710,6 +805,10 @@ PrefabInstance:
     - target: {fileID: 4896045037142706023, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_Name
       value: Vehicle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896045037142706023, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.x

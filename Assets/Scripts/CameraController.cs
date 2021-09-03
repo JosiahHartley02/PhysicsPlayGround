@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform target;
+    public Transform[] target;
+    public GameObject[] targetChecks;
     public float desiredDistance = 5.0f;
     public float sensitivity = 2.0f;
     public float relaxSpeed = 5.0f;
@@ -13,12 +14,23 @@ public class CameraController : MonoBehaviour
 
     private float currentDistance = 0.0f;
 
+    private PlayerController _boxChanController;
+    private VehicleBehavior _vehicleController;
+    private int _currentCameraTarget = 0;
+
     private void Start()
     {
+        _boxChanController = targetChecks[0].GetComponent<PlayerController>();
+        _vehicleController = targetChecks[1].GetComponent<VehicleBehavior>();
         currentDistance = desiredDistance;
     }
     private void Update()
     {
+        if (_boxChanController.activePlayer)
+            _currentCameraTarget = 0;
+        else if (_vehicleController.activePlayer)
+            _currentCameraTarget = 1;
+
         desiredDistance -= Input.GetAxis("Mouse ScrollWheel");
         //Rotate the camera
         if(Input.GetMouseButton(1))
@@ -38,13 +50,13 @@ public class CameraController : MonoBehaviour
         }
         //Move the camera
         RaycastHit hitInfo;
-        if (Physics.Raycast(target.position, -transform.forward, out hitInfo, desiredDistance))
+        if (Physics.Raycast(target[_currentCameraTarget].position, -transform.forward, out hitInfo, desiredDistance))
         {
             currentDistance = Mathf.MoveTowards(currentDistance, hitInfo.distance, Time.deltaTime * relaxSpeed * (desiredDistance / currentDistance));
         }
         else
             currentDistance = Mathf.MoveTowards(currentDistance, desiredDistance, Time.deltaTime * relaxSpeed * (desiredDistance/ currentDistance));
         
-        transform.position = target.position + (currentDistance * -transform.forward);
+        transform.position = target[_currentCameraTarget].position + (currentDistance * -transform.forward);
     }
 }

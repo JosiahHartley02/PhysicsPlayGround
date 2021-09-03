@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class VehicleBehavior : MonoBehaviour
 {
+    [SerializeField]
+    public bool activePlayer = false;
+
     public HingeJoint frontRight;
     public HingeJoint frontLeft;
     public HingeJoint backRight;
     public HingeJoint backLeft;
     private void Update()
     {
+        if (!activePlayer)
+            return;
         //Forward and Backwards
         if(Input.GetKey(KeyCode.UpArrow))
         {
