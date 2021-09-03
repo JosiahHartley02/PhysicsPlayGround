@@ -33,13 +33,26 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (!activePlayer)
-        {
-            _animator.enabled = false;
+        //Set Animator enabled equal to whether or not the player is active
+        _animator.enabled = activePlayer;
+        //if the animator is not enabled then dont update
+        if (!_animator.enabled)
             return;
+
+        //if the player is left clicking but not moving the camera
+        if(Input.GetMouseButton(0))
+        {
+            //cast a ray to see what the player clicked on
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitInfo;
+            if (Physics.Raycast(ray, out hitInfo, 100) && hitInfo.transform.gameObject.tag == "Player")
+            {
+                activePlayer = false;
+                VehicleBehavior vehicle = hitInfo.transform.gameObject.GetComponent<VehicleBehavior>();
+                vehicle.activePlayer = true;
+            }
         }
-        else
-            _animator.enabled = true;
+
         //Get WASD Input
         float InputRight = Input.GetAxis("Horizontal");
         float InputForward = Input.GetAxis("Vertical");
