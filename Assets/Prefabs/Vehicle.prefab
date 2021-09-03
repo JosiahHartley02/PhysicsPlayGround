@@ -288,10 +288,10 @@ HingeJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9111144138530118983}
   m_ConnectedBody: {fileID: 5452951111061159806}
-  m_Anchor: {x: 0.8, y: 0, z: 0.32}
-  m_Axis: {x: 1, y: 0, z: 0.349066}
+  m_Anchor: {x: 0.8, y: 0, z: 0.38}
+  m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00076012313, y: 1.59765, z: 0.000000014901161}
+  m_ConnectedAnchor: {x: 0.00999999, y: 1.4999999, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -323,10 +323,10 @@ HingeJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9111144138530118983}
   m_ConnectedBody: {fileID: 6957341872397432653}
-  m_Anchor: {x: -0.8, y: 0, z: 0.42}
-  m_Axis: {x: -1, y: 0, z: -0.349066}
+  m_Anchor: {x: -0.8, y: 0, z: 0.38}
+  m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.018033713, y: 1.563448, z: -0.000000007450581}
+  m_ConnectedAnchor: {x: -0.00999999, y: 1.4999999, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -437,6 +437,7 @@ MonoBehaviour:
   frontLeftWheel: {fileID: 0}
   backRightWheel: {fileID: 0}
   backLeftWheel: {fileID: 0}
+  desiredTireRotation: 20
 --- !u!1001 &2077091638047614936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -458,19 +459,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.4055798
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.579228
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.579228
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.4055798
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_RootOrder
@@ -486,7 +487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalScale.y
@@ -600,19 +601,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.579228
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.4055798
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4055798
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.579228
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_RootOrder
@@ -628,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalScale.y

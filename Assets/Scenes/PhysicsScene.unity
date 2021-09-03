@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 6207709833248221353, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
+      propertyPath: activePlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6602492272913546364, guid: d849ffca6e4c2d14985973cbf7f5d12e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -790,6 +794,10 @@ PrefabInstance:
       propertyPath: frontRightWheel
       value: 
       objectReference: {fileID: 343351335}
+    - target: {fileID: 1978929651, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: activePlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 549853974826329808, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.37
@@ -876,11 +884,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.018033698
+      value: -0.00999999
       objectReference: {fileID: 0}
     - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.5634477
+      value: 1.4999996
       objectReference: {fileID: 0}
     - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_Motor.freeSpin
@@ -892,15 +900,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.000000007450581
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.00076012313
+      value: 0.00999999
       objectReference: {fileID: 0}
     - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.59765
+      value: 1.4999999
       objectReference: {fileID: 0}
     - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_Motor.freeSpin
@@ -912,7 +924,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.000000014901161
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6915106953737981691, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_Enabled
