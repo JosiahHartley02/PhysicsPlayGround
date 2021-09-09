@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class ProjectileLauncher : MonoBehaviour
 {
+    //Declare a target for the projectile spawner to lob projectiles towards
     public Transform target;
+    //Declare the prefab gameobject with a rigid body to lob
     public Rigidbody projectile;
 
+    //Decide how long we want the projectile to be in the air for
     public float airTime = 2.0f;
 
     private Vector3 _displacement = new Vector3();
@@ -17,6 +20,7 @@ public class ProjectileLauncher : MonoBehaviour
 
     private void Update()
     {
+        //Temp Launch key
         if (Input.GetKeyDown(KeyCode.G))
             LaunchProjectile();
     }
@@ -30,7 +34,7 @@ public class ProjectileLauncher : MonoBehaviour
         _finalVelocity = FindFinalVelocity(_initialVelocity, _acceleration, _time);
 
         Rigidbody projectileInstance = Instantiate(projectile, transform.position, transform.rotation);
-        projectileInstance.AddForce(_initialVelocity * projectileInstance.mass);
+        projectileInstance.AddForce(_initialVelocity, ForceMode.VelocityChange);
     }
 
     public Vector3 FindFinalVelocity(Vector3 initialVelocity, Vector3 acceleration, float time)
