@@ -93,7 +93,6 @@ public class PlayerController : MonoBehaviour
             }
             _animator.SetFloat("Speed", _desiredVelocity.magnitude / speed);
         }
-        _animator.SetBool("Jump", !_isGrounded);
 
 
         //Apply jump strength
@@ -114,6 +113,9 @@ public class PlayerController : MonoBehaviour
 
         //Apply air velocity
         _desiredVelocity += _airVelocity;
+
+        _animator.SetBool("Jump", !_isGrounded);
+        _animator.SetFloat("VerticalSpeed", _airVelocity.y / jumpstrength);
 
         //Move
         _controller.Move((_desiredVelocity) * Time.deltaTime);

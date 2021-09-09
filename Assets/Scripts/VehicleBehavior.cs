@@ -48,12 +48,33 @@ public class VehicleBehavior : MonoBehaviour
         if (InputRight < 0)
         {
             //Rotate The Tires Toward the desired Rotation
-            frontRightTire.transform.Rotate(new Vector3(0, Mathf.Lerp(frontRightTire.transform.rotation.z, desiredTireRotation, 0.5f), 0));
-            frontLeftTire.transform.Rotate(new Vector3(0, Mathf.Lerp(frontLeftTire.transform.rotation.z, desiredTireRotation, 0.5f), 0));*/
-            
-            //Move the joints anchor
-            
+            frontRightTire.transform.Rotate(0, 0, Mathf.Lerp(frontRightTire.transform.rotation.eulerAngles.z, desiredTireRotation, 0.0
+                3f));
+
+            frontLeftTire.transform.rotation =
+                new Quaternion(frontLeftTire.transform.rotation.eulerAngles.x,
+                Mathf.Lerp(frontLeftTire.transform.rotation.eulerAngles.y, desiredTireRotation, 0.3f),
+                frontLeftTire.transform.rotation.eulerAngles.z,
+                frontLeftTire.transform.rotation.w);
+
+/*            //Move the joints anchor
+            frontRightWheel.anchor =
+                new Vector3(Mathf.Lerp(frontRightWheel.anchor.x,0.8f,0.3f),
+                Mathf.Lerp(frontRightWheel.anchor.y, 0.03f, 0.3f),
+                Mathf.Lerp(frontRightWheel.anchor.z, 0.305f, 0.3f));
+            frontLeftWheel.anchor =
+                new Vector3(Mathf.Lerp(frontLeftWheel.anchor.x, 0.8f, 0.3f),
+                Mathf.Lerp(frontLeftWheel.anchor.y, 0.03f, 0.3f),
+                Mathf.Lerp(frontLeftWheel.anchor.z, 0.305f, 0.3f));
             //Rotate the joints Axis
+            frontRightWheel.axis =
+                new Vector3(Mathf.Lerp(frontRightWheel.axis.x, 1, 0.3f),
+                Mathf.Lerp(frontRightWheel.axis.y, 0, 0.3f),
+                Mathf.Lerp(frontRightWheel.axis.z, 0.44f, 0.3f));
+            frontLeftWheel.axis =
+                new Vector3(Mathf.Lerp(frontLeftWheel.axis.x, -1, 0.3f),
+                Mathf.Lerp(frontLeftWheel.axis.y, 0, 0.3f),
+                Mathf.Lerp(frontLeftWheel.axis.z, -0.44f, 0.3f));*/
         }
         else if (InputRight > 0)
         {
@@ -82,8 +103,10 @@ public class VehicleBehavior : MonoBehaviour
 
     //Left Turn
     //Front Right Tire Y Rotation = -23
-    //Front Left Tire Y Rotation = -23
     //FrontRightWheel Anchor = (0.8,0.03,0.305)
     //FrontRightWheel Axis = (1,0,0.44)
+
+    //Front Left Tire Y Rotation = -23
     //FrontLeftWheel Anchor = (-0.76,0.03,0.44)
+    //FrontLeftWheel Axis = (-1,0,-0.44)
 }

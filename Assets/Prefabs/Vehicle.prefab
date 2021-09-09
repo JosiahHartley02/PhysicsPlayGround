@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1595570735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1595570736}
+  m_Layer: 0
+  m_Name: VehicleCameraFocus
+  m_TagString: CameraFocusPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1595570736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595570735}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.48, z: -0.63}
+  m_LocalScale: {x: 1, y: 2, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 6465845587156875396}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611617420722101093
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +213,7 @@ GameObject:
   - component: {fileID: 1978929651}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +228,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 2}
-  m_Children: []
+  m_Children:
+  - {fileID: 1595570736}
   m_Father: {fileID: 549853974826329808}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -326,7 +357,7 @@ HingeJoint:
   m_Anchor: {x: -0.8, y: 0, z: 0.38}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00999999, y: -1.4999999, z: 0}
+  m_ConnectedAnchor: {x: -0.00999999, y: 1.4999999, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -361,7 +392,7 @@ HingeJoint:
   m_Anchor: {x: -0.8, y: 0, z: -0.38}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00999999, y: -1.4999999, z: 0}
+  m_ConnectedAnchor: {x: 0.00999999, y: 1.4999999, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -433,11 +464,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activePlayer: 0
-  frontRightWheel: {fileID: 0}
-  frontLeftWheel: {fileID: 0}
-  backRightWheel: {fileID: 0}
-  backLeftWheel: {fileID: 0}
-  desiredTireRotation: 20
+  frontRightWheel: {fileID: 6877229050747276571}
+  frontLeftWheel: {fileID: 5981497660728530785}
+  backRightWheel: {fileID: 3683860926281556716}
+  backLeftWheel: {fileID: 3527555491255523586}
+  desiredTireRotation: -23
 --- !u!1001 &2077091638047614936
 PrefabInstance:
   m_ObjectHideFlags: 0
