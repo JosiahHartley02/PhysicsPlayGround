@@ -18,7 +18,7 @@ public class VehicleBehavior : MonoBehaviour
     private JointMotor backLeftMotor;
 
 
-    public float desiredTireRotation = 20;
+    public float desiredTireRotation = -23;
 
     private void Update()
     {
@@ -47,18 +47,27 @@ public class VehicleBehavior : MonoBehaviour
         //INTRODUCE CLAMPING TO EACH FUNCTION TO PREVENT OVER ROTATING
         if (InputRight < 0)
         {
-            frontRightTire.transform.Rotate(new Vector3(0, 0, Mathf.Lerp(frontRightTire.transform.rotation.z, desiredTireRotation, 0.3f)));
-            frontLeftTire.transform.Rotate(new Vector3(0, 0, Mathf.Lerp(frontLeftTire.transform.rotation.z, desiredTireRotation, 0.3f)));
+            //Rotate The Tires Toward the desired Rotation
+            frontRightTire.transform.Rotate(new Vector3(0, Mathf.Lerp(frontRightTire.transform.rotation.z, desiredTireRotation, 0.5f), 0));
+            frontLeftTire.transform.Rotate(new Vector3(0, Mathf.Lerp(frontLeftTire.transform.rotation.z, desiredTireRotation, 0.5f), 0));
+            //Move the joints anchor
+            //Rotate the joints Axis
         }
         else if (InputRight > 0)
         {
-            frontRightTire.transform.Rotate(new Vector3(0, 0, Mathf.Lerp(frontRightTire.transform.rotation.z, -desiredTireRotation, 0.3f)));
-            frontLeftTire.transform.Rotate(new Vector3(0, 0, Mathf.Lerp(frontLeftTire.transform.rotation.z, -desiredTireRotation, 0.3f)));
+            //Rotate the Tires Toward the desired Rotation
+            frontRightTire.transform.Rotate(new Vector3(0, Mathf.Lerp(frontRightTire.transform.rotation.z, desiredTireRotation, 0.5f), 0));
+            frontLeftTire.transform.Rotate(new Vector3(0, Mathf.Lerp(frontLeftTire.transform.rotation.z, desiredTireRotation, 0.5f), 0));
+            //Move the joints anchor
+            //Rotate the joints Axis
         }
         else
         {
-            frontRightTire.transform.Rotate(new Vector3(0, 0, Mathf.Lerp(frontRightTire.transform.rotation.z, 0, 0.15f)));
-            frontLeftTire.transform.Rotate(new Vector3(0, 0, Mathf.Lerp(frontLeftTire.transform.rotation.z, 0, 0.15f)));
+            //Rotate the Tires toward the resting rotation
+            frontRightTire.transform.Rotate(new Vector3(0, Mathf.Lerp(frontRightTire.transform.rotation.z, 0, 0.15f), 0));
+            frontLeftTire.transform.Rotate(new Vector3(0, Mathf.Lerp(frontLeftTire.transform.rotation.z, 0, 0.15f), 0));
+            //Move the joints anchor
+            //Rotate the joints Axis
         }
 
 
@@ -68,4 +77,11 @@ public class VehicleBehavior : MonoBehaviour
         backRightWheel.motor = backRightMotor;
         backLeftWheel.motor = backLeftMotor;
     }
+
+    //Left Turn
+    //Front Right Tire Y Rotation = -23
+    //Front Left Tire Y Rotation = -23
+    //FrontRightWheel Anchor = (0.8,0.03,0.305)
+    //FrontRightWheel Axis = (1,0,0.44)
+    //FrontLeftWheel Anchor = (-0.76,0.03,0.44)
 }

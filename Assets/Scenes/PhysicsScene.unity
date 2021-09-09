@@ -842,6 +842,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1338632272195284064, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.10957968
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338632272195284064, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.1720823
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338632272195284064, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.69856447
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338632272195284064, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6858482
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338632272195284064, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338632272195284064, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338632272195284064, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 5.17
+      objectReference: {fileID: 0}
     - target: {fileID: 3527555491255523586, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.00999999
@@ -858,6 +886,14 @@ PrefabInstance:
       propertyPath: m_Motor.force
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3527555491255523586, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527555491255523586, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3683860926281556716, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.00999999
@@ -873,6 +909,34 @@ PrefabInstance:
     - target: {fileID: 3683860926281556716, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_Motor.force
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683860926281556716, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157509937661928531, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.4156269
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157509937661928531, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5720614
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157509937661928531, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5720614
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157509937661928531, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.4156269
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157509937661928531, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157509937661928531, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4896045037142706023, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_Name
@@ -884,11 +948,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.00999999
+      value: 0.03093224
       objectReference: {fileID: 0}
     - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.4999996
+      value: -1.6274453
       objectReference: {fileID: 0}
     - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_Motor.freeSpin
@@ -900,19 +964,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0
+      value: -0.024999976
       objectReference: {fileID: 0}
     - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_AutoConfigureConnectedAnchor
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_Anchor.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_Anchor.z
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_Axis.z
+      value: -0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981497660728530785, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_Anchor.x
+      value: -0.76
       objectReference: {fileID: 0}
     - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.00999999
+      value: 0.013889059
       objectReference: {fileID: 0}
     - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.4999999
+      value: 1.6542691
       objectReference: {fileID: 0}
     - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_Motor.freeSpin
@@ -924,11 +1004,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0
+      value: -0.012955553
       objectReference: {fileID: 0}
     - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_AutoConfigureConnectedAnchor
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_Axis.z
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_Anchor.z
+      value: 0.305
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877229050747276571, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
+      propertyPath: m_Anchor.y
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6915106953737981691, guid: 9bc2f7c4a0886df499cba03d1ec8b66f, type: 3}
       propertyPath: m_Enabled

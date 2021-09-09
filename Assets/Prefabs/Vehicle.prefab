@@ -326,7 +326,7 @@ HingeJoint:
   m_Anchor: {x: -0.8, y: 0, z: 0.38}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00999999, y: 1.4999999, z: 0}
+  m_ConnectedAnchor: {x: 0.00999999, y: -1.4999999, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -361,7 +361,7 @@ HingeJoint:
   m_Anchor: {x: -0.8, y: 0, z: -0.38}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00999999, y: 1.4999999, z: 0}
+  m_ConnectedAnchor: {x: -0.00999999, y: -1.4999999, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -483,11 +483,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalScale.y
@@ -554,11 +554,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalScale.y
@@ -625,11 +625,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalScale.y
@@ -696,11 +696,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
       propertyPath: m_LocalScale.y
