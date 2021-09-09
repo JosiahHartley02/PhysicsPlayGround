@@ -49,8 +49,10 @@ public class VehicleBehavior : MonoBehaviour
         {
             //Rotate The Tires Toward the desired Rotation
             frontRightTire.transform.Rotate(new Vector3(0, Mathf.Lerp(frontRightTire.transform.rotation.z, desiredTireRotation, 0.5f), 0));
-            frontLeftTire.transform.Rotate(new Vector3(0, Mathf.Lerp(frontLeftTire.transform.rotation.z, desiredTireRotation, 0.5f), 0));
+            frontLeftTire.transform.Rotate(new Vector3(0, Mathf.Lerp(frontLeftTire.transform.rotation.z, desiredTireRotation, 0.5f), 0));*/
+            
             //Move the joints anchor
+            
             //Rotate the joints Axis
         }
         else if (InputRight > 0)
