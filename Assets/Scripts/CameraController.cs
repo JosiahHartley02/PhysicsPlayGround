@@ -16,12 +16,15 @@ public class CameraController : MonoBehaviour
 
     private PlayerController _boxChanController;
     private VehicleBehavior _vehicleController;
+    private JetBehavior _jetBehavior;
     private int _currentCameraTarget = 0;
 
     private void Start()
     {
         _boxChanController = targetChecks[0].GetComponent<PlayerController>();
         _vehicleController = targetChecks[1].GetComponent<VehicleBehavior>();
+        /*_jetBehavior = targetChecks[2].GetComponent<JetBehavior>();*/
+
         currentDistance = desiredDistance;
     }
     private void Update()
@@ -29,7 +32,9 @@ public class CameraController : MonoBehaviour
         if (_boxChanController.activePlayer)
             _currentCameraTarget = 0;
         else if (_vehicleController.activePlayer)
-            _currentCameraTarget = 1;
+            _currentCameraTarget = 1;/*
+        else if (_jetBehavior.activePlayer)
+            _currentCameraTarget = 2;*/
 
         desiredDistance -= Input.GetAxis("Mouse ScrollWheel");
         //Rotate the camera
@@ -42,7 +47,7 @@ public class CameraController : MonoBehaviour
             rotation.x = Input.GetAxis("Mouse Y") * (invertY ? 1.0f : -1.0f);
             rotation.y = Input.GetAxis("Mouse X") * (invertX ? 1.0f : -1.0f);
             //Look up and down by rotating around the X-axis
-            angles.x = Mathf.Clamp(angles.x + rotation.x * sensitivity, 0.0f,80.0f);
+            angles.x = Mathf.Clamp(angles.x + rotation.x * sensitivity, 0,80.0f);
             //Look left and right by rotating around the Y-axis
             angles.y += rotation.y * sensitivity;
             //Set the updated angles
