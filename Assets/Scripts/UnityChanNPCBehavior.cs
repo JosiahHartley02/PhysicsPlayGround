@@ -10,6 +10,8 @@ public class UnityChanNPCBehavior : MonoBehaviour
     [SerializeField]
     private Transform _destination;
 
+    [SerializeField]
+    private float desiredTimeAlive;
     public float speed = 3;
 
     private CharacterController _controller;
@@ -17,6 +19,8 @@ public class UnityChanNPCBehavior : MonoBehaviour
 
     [SerializeField]
     private Animator _animator;
+
+    private float _timeAlive;
 
     private void Awake()
     {
@@ -26,11 +30,14 @@ public class UnityChanNPCBehavior : MonoBehaviour
 
     private void Update()
     {
+        _timeAlive += Time.deltaTime;
+        if (_timeAlive > desiredTimeAlive)
+        {
+            _navigation.isStopped = true;
+            activeAnimator = false;
+        }
         //Set Animator enabled equal to whether or not the player is active
         _animator.enabled = activeAnimator;
-        //if the animator is not enabled then dont update
-        if (!_animator.enabled)
-            return;
 
         _navigation.SetDestination(_destination.position);
 
@@ -43,6 +50,7 @@ public class UnityChanNPCBehavior : MonoBehaviour
         {
             transform.forward = _navigation.velocity.normalized;
         }
+        else
         _animator.SetFloat("Speed", _navigation.velocity.magnitude / speed);
     }
 
