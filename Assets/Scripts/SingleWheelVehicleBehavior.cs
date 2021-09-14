@@ -23,6 +23,7 @@ public class SingleWheelVehicleBehavior : MonoBehaviour
         _rightMotor.targetVelocity -= byThisMuch;
         _leftMotor.targetVelocity += byThisMuch;
 
+        //Clamp the motor so the vehicle doesn't start flipping
         _rightMotor.targetVelocity = Mathf.Clamp(_rightMotor.targetVelocity, -800, 800);
         _leftMotor.targetVelocity = Mathf.Clamp(_leftMotor.targetVelocity, -800, 800);
 

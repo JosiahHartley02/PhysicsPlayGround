@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
             return;
 
         //if the player is left clicking but not moving the camera
-        if(Input.GetMouseButton(0))
+        if(Input.GetKeyDown(KeyCode.F))
         {
             //cast a ray to see what the player clicked on
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
