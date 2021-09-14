@@ -39,19 +39,7 @@ public class PlayerController : MonoBehaviour
             return;
 
         //if the player is left clicking but not moving the camera
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            //cast a ray to see what the player clicked on
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, 100) && hitInfo.transform.gameObject.tag == "Vehicle")
-            {
-                activePlayer = false;
-                VehicleBehavior vehicle = hitInfo.transform.gameObject.GetComponent<VehicleBehavior>();
-                vehicle.activePlayer = true;
-            }
-        }
-
+        ActivePlayerSwitch();
         //Get WASD Input
         float InputRight = Input.GetAxis("Horizontal");
         float InputForward = Input.GetAxis("Vertical");
@@ -70,7 +58,7 @@ public class PlayerController : MonoBehaviour
         //Get jump input
         _isJumpDesired = Input.GetButton("Jump");
 
-         //Set movement magnitude
+        //Set movement magnitude
         _desiredVelocity.Normalize();
         _desiredVelocity *= speed;
 
@@ -107,7 +95,7 @@ public class PlayerController : MonoBehaviour
         {
             _airVelocity.y = -1.0f;
         }
-        
+
         //Apply gravity
         _airVelocity += Physics.gravity * gravityModifier * Time.deltaTime;
 
@@ -119,6 +107,33 @@ public class PlayerController : MonoBehaviour
 
         //Move
         _controller.Move((_desiredVelocity) * Time.deltaTime);
-    }   
-    
+    }
+
+    private void ActivePlayerSwitch()
+    {
+        //We check to see if the user clicked
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            //IF so then we cast a ray to see what the user clicked on
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            //We hold a reference to the collider that the mouse interacted with
+            RaycastHit hitInfo;
+
+            //We check the ray to see what collider the user clicked on and check to see if its the player
+            if (Physics.Raycast(ray, out hitInfo, 100) && hitInfo.transform.gameObject.tag == "Vehicle")
+            {
+                //If it is then this is no longer the active player
+                activePlayer = false;
+                //Now we get a reference to the switch script embedded in each collider possesing game object of the player
+                ActivePlayerSwitch referenceToPlayer = hitInfo.transform.gameObject.GetComponent<ActivePlayerSwitch>();
+                //The script holds a reference to the player game object we need to control
+                GameObject player = referenceToPlayer.referenceToPlayer;
+                //now we get the player controller script from the game object
+                VehicleBehavior controller = player.GetComponent<VehicleBehavior>();
+                //Now we can set the player to be the active player
+                controller.activePlayer = true;
+            }
+        }
+    }
 }

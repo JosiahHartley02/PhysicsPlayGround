@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6813312065929786574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254300166444856277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de213c434de264647913849bab7394d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceToPlayer: {fileID: 6986208229386013587}
 --- !u!1 &1922508277770011939
 GameObject:
   m_ObjectHideFlags: 0
@@ -30,6 +43,19 @@ Transform:
   m_Father: {fileID: 4916819512084282289}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4679576821762876383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3965004730985878801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de213c434de264647913849bab7394d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceToPlayer: {fileID: 6986208229386013587}
 --- !u!1 &4896045037142706023
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,9 +109,10 @@ GameObject:
   - component: {fileID: 1084897925696722530}
   - component: {fileID: 5437572362606212692}
   - component: {fileID: 6365385710275831179}
+  - component: {fileID: 1356606140385276587}
   m_Layer: 0
   m_Name: FrontAxel
-  m_TagString: Untagged
+  m_TagString: Vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,6 +293,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftWheel: {fileID: 5437572362606212692}
   rightWheel: {fileID: 1084897925696722530}
+--- !u!114 &1356606140385276587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5681917830004100561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de213c434de264647913849bab7394d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceToPlayer: {fileID: 6986208229386013587}
 --- !u!1 &6866708369058600846
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,9 +322,10 @@ GameObject:
   - component: {fileID: 8847533882124777989}
   - component: {fileID: 3792494219936227207}
   - component: {fileID: 4640907685864788952}
+  - component: {fileID: 3848031252956073841}
   m_Layer: 0
   m_Name: RearAxel
-  m_TagString: Untagged
+  m_TagString: Vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,6 +506,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftWheel: {fileID: 3792494219936227207}
   rightWheel: {fileID: 8847533882124777989}
+--- !u!114 &3848031252956073841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6866708369058600846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de213c434de264647913849bab7394d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceToPlayer: {fileID: 6986208229386013587}
 --- !u!1 &6986208229386013587
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,9 +535,10 @@ GameObject:
   - component: {fileID: 7205228121244637486}
   - component: {fileID: 3783466624524549041}
   - component: {fileID: 4087929047338356567}
+  - component: {fileID: 4062035658337319418}
   m_Layer: 0
   m_Name: Cabin
-  m_TagString: Untagged
+  m_TagString: Vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -608,7 +663,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activePlayer: 0
-  turningAxel: {fileID: 0}
   frontAxel: {fileID: 6365385710275831179}
   rearAxel: {fileID: 4640907685864788952}
 --- !u!153 &4087929047338356567
@@ -706,6 +760,45 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4062035658337319418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986208229386013587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de213c434de264647913849bab7394d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceToPlayer: {fileID: 6986208229386013587}
+--- !u!114 &1693550339674761619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7068131083969471022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de213c434de264647913849bab7394d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceToPlayer: {fileID: 6986208229386013587}
+--- !u!114 &1428279712420991516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8019108159621669362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de213c434de264647913849bab7394d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceToPlayer: {fileID: 6986208229386013587}
 --- !u!1001 &1079150745471066543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -765,8 +858,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: FrontLeftTire
       objectReference: {fileID: 0}
+    - target: {fileID: 2274813389782782586, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+      propertyPath: m_TagString
+      value: Vehicle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+--- !u!1 &1254300166444856277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2274813389782782586, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+  m_PrefabInstance: {fileID: 1079150745471066543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &6450949140933949705 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: -2918462360977139546, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
@@ -840,6 +942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackLeftTire
       objectReference: {fileID: 0}
+    - target: {fileID: 2274813389782782586, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+      propertyPath: m_TagString
+      value: Vehicle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
 --- !u!4 &2798931439762525395 stripped
@@ -850,6 +956,11 @@ Transform:
 --- !u!54 &9216842587673599949 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: -2918462360977139546, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+  m_PrefabInstance: {fileID: 2924881740078385003}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3965004730985878801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2274813389782782586, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
   m_PrefabInstance: {fileID: 2924881740078385003}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8131349027785651080
@@ -911,16 +1022,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackRightTire
       objectReference: {fileID: 0}
+    - target: {fileID: 2274813389782782586, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+      propertyPath: m_TagString
+      value: Vehicle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+--- !u!54 &2857484665571093294 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: -2918462360977139546, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+  m_PrefabInstance: {fileID: 8131349027785651080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9122274113370486832 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
   m_PrefabInstance: {fileID: 8131349027785651080}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &2857484665571093294 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: -2918462360977139546, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+--- !u!1 &8019108159621669362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2274813389782782586, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
   m_PrefabInstance: {fileID: 8131349027785651080}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9045138436195594324
@@ -982,15 +1102,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: FrontRightTire
       objectReference: {fileID: 0}
+    - target: {fileID: 2274813389782782586, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+      propertyPath: m_TagString
+      value: Vehicle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+--- !u!54 &3096577197594880242 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: -2918462360977139546, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+  m_PrefabInstance: {fileID: 9045138436195594324}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8342426134494477292 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1026971496558480312, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
   m_PrefabInstance: {fileID: 9045138436195594324}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &3096577197594880242 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: -2918462360977139546, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
+--- !u!1 &7068131083969471022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2274813389782782586, guid: 0cd609a5e88de1c46b51d33594958eab, type: 3}
   m_PrefabInstance: {fileID: 9045138436195594324}
   m_PrefabAsset: {fileID: 0}
