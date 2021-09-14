@@ -67,7 +67,7 @@ public class VehicleBehavior : MonoBehaviour
                 controller.activePlayer = true;
 
                 //We can also set the player position to be at the world location of the gameobject selected to avoid teleportation
-                player.transform.position = hitInfo.transform.position;
+                player.transform.position = hitInfo.transform.gameObject.transform.position;
             }
         }
     }
