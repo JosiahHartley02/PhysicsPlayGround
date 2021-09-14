@@ -22,6 +22,10 @@ public class SingleWheelVehicleBehavior : MonoBehaviour
         //modify the reference motors
         _rightMotor.targetVelocity -= byThisMuch;
         _leftMotor.targetVelocity += byThisMuch;
+
+        _rightMotor.targetVelocity = Mathf.Clamp(_rightMotor.targetVelocity, -800, 800);
+        _leftMotor.targetVelocity = Mathf.Clamp(_leftMotor.targetVelocity, -800, 800);
+
         //set the motors equal to the reference motors
         rightWheel.motor = _rightMotor;
         leftWheel.motor = _leftMotor;
