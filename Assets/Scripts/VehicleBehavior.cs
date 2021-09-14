@@ -8,6 +8,9 @@ public class VehicleBehavior : MonoBehaviour
     [SerializeField]
     public bool activePlayer = false;
 
+    [SerializeField]
+    private ProjectileLauncher launcher;
+
     //Reference to the Front Axel Acting as a single wheel
     [SerializeField]
     private SingleWheelVehicleBehavior frontAxel;
@@ -28,9 +31,14 @@ public class VehicleBehavior : MonoBehaviour
         if (!activePlayer)
             //If not then dont bother updating the script
             return;
+
         //If it is Active, then we want to get the players input at the start of the frame
         float InputForward = Input.GetAxis("Vertical");
         float InputRight = Input.GetAxis("Horizontal");
+        bool Fire = Input.GetButtonDown("Jump");
+
+        if (Fire)
+            launcher.LaunchProjectile();
         //Now we can use the single wheel behaviors update desired velocity function
         frontAxel.UpdateDesiredVelocity(InputForward);
         rearAxel.UpdateDesiredVelocity(InputForward);

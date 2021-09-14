@@ -18,12 +18,6 @@ public class ProjectileLauncher : MonoBehaviour
     private Vector3 _initialVelocity = new Vector3();
     private Vector3 _finalVelocity = new Vector3();
 
-    private void Update()
-    {
-        //Temp Launch key
-        if (Input.GetKeyDown(KeyCode.G))
-            LaunchProjectile();
-    }
     public void LaunchProjectile()
     {
         _displacement = target.position - transform.position;
