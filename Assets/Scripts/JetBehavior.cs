@@ -9,7 +9,7 @@ public class JetBehavior : MonoBehaviour
     private ProjectileLauncher[] thruster;
 
     [SerializeField]
-    private bool npc = false;
+    public bool npc = false;
     private Rigidbody bodyreference;
     [SerializeField]
     private Rigidbody topWing;

@@ -141,4 +141,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _explosionMatrix: {fileID: 1514172290}
   _explosionForce: 1000
-  _explosionRadius: 5
+  _explosionRadius: 15

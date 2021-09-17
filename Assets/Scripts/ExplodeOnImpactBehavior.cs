@@ -30,6 +30,9 @@ public class ExplodeOnImpactBehavior : MonoBehaviour
         for (int i = 0; i < _affectedBodies.Length; i++)
         {
             _affectedBodies[i].AddExplosionForce(_explosionForce, transform.position, _explosionRadius, 20);
+            _affectedBodies[i].gameObject.AddComponent<PropulsionBehavior>();
+            PropulsionBehavior tempDespawn = _affectedBodies[i].gameObject.GetComponent<PropulsionBehavior>();
+            tempDespawn.TimeTillDestroy = 10;
         }
 
         //Destroy the bomb
