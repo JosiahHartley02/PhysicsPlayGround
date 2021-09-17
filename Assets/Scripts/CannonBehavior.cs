@@ -4,10 +4,27 @@ using UnityEngine;
 
 public class CannonBehavior : MonoBehaviour
 {
+    //We need a reference to the launch behavior
     [SerializeField]
     private ProjectileLauncher launcher;
-    private void Start()
+
+    //We need a bool to determine whether or not to launch
+    [SerializeField]
+    private bool _launch = false;
+    private bool _launched = false;
+
+    public void ToggleLaunch()
     {
-        launcher.LaunchProjectile();   
+        if (!_launched)
+        {
+            _launch = true;
+        }
+
+
+        if (_launch && !_launched)
+        {
+            launcher.LaunchProjectile();
+            _launched = true;
+        }
     }
 }

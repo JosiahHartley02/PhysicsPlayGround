@@ -44,7 +44,7 @@ public class VehicleBehavior : MonoBehaviour
         rearAxel.UpdateDesiredVelocity(InputForward);
 
         //Here we manually rotate the front axel on a free rotational axis from the higher level joint
-        frontAxel.transform.Rotate(0, InputRight * 3, 0);
+        frontAxel.transform.Rotate(0, InputRight * 4, 0);
 
         ActivePlayerSwitch();
     }

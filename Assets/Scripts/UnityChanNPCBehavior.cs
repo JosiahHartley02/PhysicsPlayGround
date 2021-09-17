@@ -9,6 +9,7 @@ public class UnityChanNPCBehavior : MonoBehaviour
     public bool activeAnimator = true;
     [SerializeField]
     private Transform _destination;
+    public bool shouldTravel = false;
 
     [SerializeField]
     private float desiredTimeAlive;
@@ -30,7 +31,6 @@ public class UnityChanNPCBehavior : MonoBehaviour
 
     private void Update()
     {
-        _timeAlive += Time.deltaTime;
         if (_timeAlive > desiredTimeAlive)
         {
             _navigation.isStopped = true;
@@ -39,7 +39,11 @@ public class UnityChanNPCBehavior : MonoBehaviour
         //Set Animator enabled equal to whether or not the player is active
         _animator.enabled = activeAnimator;
 
-        _navigation.SetDestination(_destination.position);
+        if (shouldTravel)
+        {
+            _navigation.SetDestination(_destination.position);
+            _timeAlive += Time.deltaTime;
+        }
 
         if(_navigation.velocity.magnitude != 0)
             transform.forward = _navigation.velocity.normalized;
@@ -52,6 +56,11 @@ public class UnityChanNPCBehavior : MonoBehaviour
         }
         else
         _animator.SetFloat("Speed", _navigation.velocity.magnitude / speed);
+    }
+    public void Stop()
+    {
+        _navigation.isStopped = true;
+        activeAnimator = false;
     }
 
 }
