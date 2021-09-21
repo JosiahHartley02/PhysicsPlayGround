@@ -5,6 +5,7 @@ using UnityEngine;
 public class JetBehavior : MonoBehaviour
 {
     public bool activePlayer;
+
     [SerializeField]
     private ProjectileLauncher[] thruster;
 
@@ -15,6 +16,9 @@ public class JetBehavior : MonoBehaviour
     private Rigidbody topWing;
     [SerializeField]
     private Rigidbody bottomWing;
+
+    [SerializeField]
+    private GameObject _propulsionDirection;
 
     private Quaternion desiredRotation;
     private void Start()
@@ -30,6 +34,9 @@ public class JetBehavior : MonoBehaviour
 
         if (!activePlayer && !npc)
             return;
+
+        float InputRight = Input.GetAxis("Horizontal") * 0.10f;
+        float InputUp = Input.GetAxis("Vertical") * 0.10f;
 
         bodyreference.MoveRotation(desiredRotation);
         topWing.MoveRotation(desiredRotation);

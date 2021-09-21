@@ -36,7 +36,7 @@ public class LiveUntilBehavior : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    public void ToggleActive()
+    public void Toggle()
     {
         m_active = !m_active;
     }
