@@ -14,14 +14,14 @@ public class SingleWheelVehicleBehavior : MonoBehaviour
     private JointMotor _rightMotor = new JointMotor();
     private JointMotor _leftMotor = new JointMotor();
 
-    public void UpdateDesiredVelocity(float byThisMuch)
+    public void UpdateDesiredVelocity(float tothisMuch)
     {
         //set the reference of the motors equal to the motors
         _rightMotor = rightWheel.motor;
         _leftMotor = leftWheel.motor;
         //modify the reference motors
-        _rightMotor.targetVelocity -= byThisMuch;
-        _leftMotor.targetVelocity += byThisMuch;
+        _rightMotor.targetVelocity = Mathf.Lerp(_rightMotor.targetVelocity,-tothisMuch,0.8f);
+        _leftMotor.targetVelocity = Mathf.Lerp(_rightMotor.targetVelocity, tothisMuch, 0.8f); ;
 
         //Clamp the motor so the vehicle doesn't start flipping
         _rightMotor.targetVelocity = Mathf.Clamp(_rightMotor.targetVelocity, -1000, 1000);
