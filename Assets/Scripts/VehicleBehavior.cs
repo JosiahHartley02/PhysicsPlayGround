@@ -20,6 +20,9 @@ public class VehicleBehavior : MonoBehaviour
     [SerializeField]
     private SingleWheelVehicleBehavior rearAxel;
 
+    [SerializeField]
+    private Quaternion _restingPosition = new Quaternion();
+
     private void Awake()
     {
         //Get reference to the higher level joint to simulate vehicle turning
@@ -41,11 +44,10 @@ public class VehicleBehavior : MonoBehaviour
             launcher.LaunchProjectile();
 
         //Now we can use the single wheel behaviors update desired velocity function
-        frontAxel.UpdateDesiredVelocity(InputForward * 3);
-        rearAxel.UpdateDesiredVelocity(InputForward * 3);
+        frontAxel.UpdateDesiredVelocity(InputForward * 10);
+        rearAxel.UpdateDesiredVelocity(InputForward * 10);
 
         //Here we manually rotate the front axel on a free rotational axis from the higher level joint
-        frontAxel.transform.Rotate(0, InputRight * 4, 0);
 
         ActivePlayerSwitch();
     }

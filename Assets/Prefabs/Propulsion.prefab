@@ -109,8 +109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081ca2dfd70777649b124078e6b16310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeTillDestroy: 0.8
-  TimeAlive: 0
+  m_timeTillDestroy: 0.5
+  m_timeAlive: 0
+  m_despawnOnExplode: 1
+  m_active: 1
 --- !u!54 &4941324081471645063
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -27,6 +27,10 @@ public class JetBehavior : MonoBehaviour
         if ((Input.GetButton("Jump") && activePlayer) || npc)
             for(int i = 0; i < thruster.Length; i++)
                 thruster[i].LaunchProjectile();
+
+        if (!activePlayer && !npc)
+            return;
+
         bodyreference.MoveRotation(desiredRotation);
         topWing.MoveRotation(desiredRotation);
         bottomWing.MoveRotation(desiredRotation);
