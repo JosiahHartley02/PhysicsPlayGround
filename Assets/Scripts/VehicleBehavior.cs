@@ -44,12 +44,8 @@ public class VehicleBehavior : MonoBehaviour
             launcher.LaunchProjectile();
 
         //Now we can use the single wheel behaviors update desired velocity function
-        frontAxel.UpdateDesiredVelocity(InputForward * 800);
-        rearAxel.UpdateDesiredVelocity(InputForward * 800);
-
-        //Here we manually rotate the front axel on a free rotational axis from the higher level joint
-        Vector3 rotateThisMuch = new Vector3(0,InputRight * 6,0);
-        frontAxel.transform.Rotate(rotateThisMuch);
+        frontAxel.UpdateDesiredVelocity(InputForward, InputRight);
+        rearAxel.UpdateDesiredVelocity(InputForward, InputRight);
 
         ActivePlayerSwitch();
     }
