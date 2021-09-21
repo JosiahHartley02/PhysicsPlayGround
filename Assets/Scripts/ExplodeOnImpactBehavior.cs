@@ -22,17 +22,32 @@ public class ExplodeOnImpactBehavior : MonoBehaviour
         //At the start, update the explosion radius to be what the user has set
         _explosionMatrix.radius = _explosionRadius;
     }
+
+    //When the bomb itself collides with another object
     private void OnCollisionEnter(Collision collision)
     {
+        //We will need a reference to the despawn script and the player reference scripts
+        LiveUntilBehavior tempDespawn;
         ActivePlayerSwitch temp;
-        UnityChanNPCBehavior reference;
-        //when the bomb hits something apply a force to everything within radius
+
+        //For each item that is within the radius
         for (int i = 0; i < _affectedBodies.Length; i++)
         {
+            //when the bomb hits something apply a force to everything within radius
             _affectedBodies[i].AddExplosionForce(_explosionForce, transform.position, _explosionRadius, 20);
-            _affectedBodies[i].gameObject.AddComponent<PropulsionBehavior>();
-            PropulsionBehavior tempDespawn = _affectedBodies[i].gameObject.GetComponent<PropulsionBehavior>();
-            tempDespawn.TimeTillDestroy = 10;
+
+            //Attempt to get the active player switch reference
+            if (_affectedBodies[i].TryGetComponent<ActivePlayerSwitch>(out temp))
+            {
+                //If we got it, then get the liveUntilBehavior script from that hierarchy
+                tempDespawn = temp.referenceToPlayer.GetComponent<LiveUntilBehavior>();
+            }
+            //If we didnt get it, then just get the liveUntilBehavior where its at
+            else if (_affectedBodies[i].TryGetComponent<LiveUntilBehavior>(out tempDespawn))
+            {
+            }
+            //Toggle the liveUntil behavior to be active
+            tempDespawn.Activate(5,10);
         }
 
         //Destroy the bomb
@@ -49,7 +64,7 @@ public class ExplodeOnImpactBehavior : MonoBehaviour
                 //Create a new array that is one larger than the current
                 Rigidbody[] tempArray = new Rigidbody[_affectedBodies.Length + 1];
                 //Copy the old array onto the temp array
-                for(int i = 0; i < _affectedBodies.Length; i++)
+                for (int i = 0; i < _affectedBodies.Length; i++)
                 {
                     tempArray[i] = _affectedBodies[i];
                 }
