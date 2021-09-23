@@ -36,25 +36,38 @@ public class LiveUntilBehavior : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
     public void Toggle()
     {
+        //Toggle the activity
         m_active = !m_active;
     }
+    public void ToggleOn()
+    {
+        //Set the activity on
+        m_active = true;
+    }
 
+    //Toggles activity on and set the length of time
     public void Activate(int min, int max)
     {
+
         m_active = true;
+        //Set the timer to be 100x stronger to divide later
         m_timeTillDestroy = Random.Range(min*100, max*100);
+        //Dividing here gives us a random float rather than a random int
         m_timeTillDestroy /= 100;
     }
 
     public void ToggleDespawn()
     {
+        //Despawn on explosion
         m_despawnOnExplode = !m_despawnOnExplode;
     }
 
     public bool ShouldExplode()
     {
+        //Should this despawn on explosion
         return m_despawnOnExplode;
     }
 }

@@ -40,7 +40,7 @@ public class TriggerZoneBehavior : MonoBehaviour
                     jetsToTrigger[i].npc = true;
 
                 for (int i = 0; i < lifeTimersToStart.Length; i++)
-                    lifeTimersToStart[i].Toggle();
+                    lifeTimersToStart[i].ToggleOn();
             }
     }
 }

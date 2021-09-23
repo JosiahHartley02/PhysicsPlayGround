@@ -40,7 +40,7 @@ public class VehicleBehavior : MonoBehaviour
         float InputRight = Input.GetAxis("Horizontal");
         bool Fire = Input.GetButtonDown("Jump");
 
-        if (Fire)
+        if (Fire && launcher.target)
             launcher.LaunchProjectile();
 
         //Now we can use the single wheel behaviors update desired velocity function

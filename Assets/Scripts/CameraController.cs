@@ -73,14 +73,19 @@ public class CameraController : MonoBehaviour
         }
 
         //Move the camera
+        //Create a temp hitInfo for a raycast
         RaycastHit hitInfo;
+        //If the raycast from the camera target position, headed at the negative forward, for desired distance hits anything
         if (Physics.Raycast(cameraFocusPoint[_currentCameraTarget].position, -transform.forward, out hitInfo, desiredDistance))
         {
+            //we interpolate the current distance of the camera to be closer to the target distance
             currentDistance = Mathf.MoveTowards(currentDistance, hitInfo.distance, Time.deltaTime * relaxSpeed * (desiredDistance / currentDistance));
         }
         else
+            //if the raycast hits nothing, then just set the distance to be the max distance
             currentDistance = Mathf.MoveTowards(currentDistance, desiredDistance, Time.deltaTime * relaxSpeed * (desiredDistance/ currentDistance));
         
+        //We set the transform position to be the location of the camera target plus the desired distance from said object
         transform.position = cameraFocusPoint[_currentCameraTarget].position + (currentDistance * -transform.forward);
     }
 }
