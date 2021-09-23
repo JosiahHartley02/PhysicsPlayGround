@@ -111,7 +111,7 @@ public class JetBehavior : MonoBehaviour
         //set the old array to be the temp array
         previousLocations = tempArray;
 
-        _target.transform.position = transform.position + AverageLocationVelocity() * 3;
+        _target.transform.position = transform.position + (AverageLocationVelocity() * 2);
     }
 
     private Vector3 AverageLocationVelocity()
