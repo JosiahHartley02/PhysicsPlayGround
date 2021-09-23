@@ -62,7 +62,7 @@ public class JetBehavior : MonoBehaviour
 
     private void MarkLocation()
     {
-        if(previousLocations.Length == 10)
+        if(previousLocations.Length == 3)
             RidOldestLocation();
         //Create a temp rigidBody value
         Vector3 temp = (transform.position);
@@ -95,7 +95,7 @@ public class JetBehavior : MonoBehaviour
         //set the old array to be the temp array
         previousLocations = tempArray;
 
-        _target.transform.position = (_target.transform.position += AverageLocationVelocity());
+        _target.transform.position = transform.position + AverageLocationVelocity() * 3;
     }
 
     private Vector3 AverageLocationVelocity()

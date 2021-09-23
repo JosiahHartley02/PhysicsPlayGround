@@ -33,8 +33,11 @@ public class TetherToBehavior : MonoBehaviour
         //We get the length of the desired rope to see how many we will need
         float distance = displacement.magnitude;
         //We check to see how many ropes we will need by dividing the distance by the length of each rope
-        int numberOfRopes = Mathf.RoundToInt(distance / heightOfRope);
-
+        float numberOfRopesTotal = (distance / heightOfRope);
+        //Reduce total by 20%
+        numberOfRopesTotal = numberOfRopesTotal - (numberOfRopesTotal * 0.2f);
+        //Convert to a whole number
+        int numberOfRopes = Mathf.RoundToInt(numberOfRopesTotal);
         //We hold a spawn position for each rope we want to instantiate
         Vector3 spawnHere = objectToTetherFrom.transform.position;
 
@@ -68,11 +71,9 @@ public class TetherToBehavior : MonoBehaviour
                 joint.connectedBody = objectToTetherFrom.GetComponent<Rigidbody>();
             }
         }
-        //Get a reference to the object we are tethering to
-        ConfigurableJoint tempJoint = itemToTetherTo.GetComponent<ConfigurableJoint>();
-        //Link it to the last rope we instantiated
-        tempJoint.connectedBody = temparray[temparray.Length - 1].GetComponent<Rigidbody>();
-
+        FixedJoint lastJoint = temparray[temparray.Length - 1].AddComponent<FixedJoint>();
+        Rigidbody rigid = itemToTetherTo.GetComponent<Rigidbody>();
+        lastJoint.connectedBody = rigid;
         //Replace the old array with this new one
         _ropeLinks = temparray;
     }

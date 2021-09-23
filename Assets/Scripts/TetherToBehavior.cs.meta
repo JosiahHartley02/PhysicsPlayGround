@@ -5,7 +5,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - objectToTetherFrom: {instanceID: 0}
-  - _ropePrefab: {fileID: 5325601445129518107, guid: 7b3094a3f308b1e4d8f7118a4eee8280, type: 3}
+  - objectToTetherTo: {instanceID: 0}
+  - _ropePrefab: {fileID: 176916541051711423, guid: efddee21b9c24b54bbe9520f691d2ff8, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
