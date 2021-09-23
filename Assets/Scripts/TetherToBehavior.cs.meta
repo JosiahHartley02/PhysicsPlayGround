@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 0fb5ba83f96b4bb41a6d65cad845684d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - objectToTetherFrom: {instanceID: 0}
+  - _ropePrefab: {fileID: 5325601445129518107, guid: 7b3094a3f308b1e4d8f7118a4eee8280, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

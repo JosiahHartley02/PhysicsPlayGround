@@ -5,8 +5,6 @@ using UnityEngine;
 public class BoosterBehavior : MonoBehaviour
 {
     [SerializeField]
-    private BoxCollider boosterCollider;
-    [SerializeField]
     float boosterPower = 5;
 
 

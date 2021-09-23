@@ -25,9 +25,12 @@ public class PlayerController : MonoBehaviour
     private bool _isJumpDesired;
     private bool _isGrounded = false;
 
+    private TetherToBehavior _tetherBehavior;
+
     private void Awake()
     {
         _controller = GetComponent<CharacterController>();
+        _tetherBehavior = GetComponent<TetherToBehavior>();
     }
 
     private void Update()
