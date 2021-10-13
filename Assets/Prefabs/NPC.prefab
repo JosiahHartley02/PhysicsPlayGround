@@ -41,7 +41,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.060835794, y: 0.0020787655, z: -0.07255355}
+  m_ConnectedAnchor: {x: 0.060835794, y: 0.0020788847, z: -0.07255355}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -128,7 +128,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.113572195, y: 0.017735964, z: -0.0004034566}
+  m_ConnectedAnchor: {x: -0.113572195, y: 0.017735844, z: -0.0004034566}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -216,7 +216,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.35136396, y: -0.008004371, z: -0.018234264}
+  m_ConnectedAnchor: {x: -0.35136396, y: -0.008004252, z: -0.018234264}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -433,7 +433,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.20427647, y: -0.03755023, z: 0.09755329}
+  m_ConnectedAnchor: {x: -0.2042765, y: -0.03755023, z: 0.097549476}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -785,7 +785,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.23378044, y: 0.000008661633, z: -0.000007300065}
+  m_ConnectedAnchor: {x: -0.23378044, y: 0.000008542889, z: -0.0000073000656}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -873,7 +873,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.35179892, y: -0.008004992, z: 0.0051435665}
+  m_ConnectedAnchor: {x: -0.35179907, y: -0.008005111, z: 0.0051473756}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -988,7 +988,7 @@ MonoBehaviour:
   activeAnimator: 1
   _destination: {fileID: 0}
   shouldTravel: 0
-  desiredTimeAlive: 0
+  desiredTimeAlive: 11
   speed: 3
   _animator: {fileID: 2497903664774406721}
 --- !u!195 &7213451220601670965
@@ -1042,15 +1042,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: d6dad0fb52ba12f458cc7ffb66882391, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: d6dad0fb52ba12f458cc7ffb66882391, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: d6dad0fb52ba12f458cc7ffb66882391, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: d6dad0fb52ba12f458cc7ffb66882391, type: 3}
       propertyPath: m_TagString
@@ -1058,11 +1058,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100062, guid: d6dad0fb52ba12f458cc7ffb66882391, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100068, guid: d6dad0fb52ba12f458cc7ffb66882391, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100074, guid: d6dad0fb52ba12f458cc7ffb66882391, type: 3}
       propertyPath: m_TagString
@@ -1074,15 +1074,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100122, guid: d6dad0fb52ba12f458cc7ffb66882391, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100128, guid: d6dad0fb52ba12f458cc7ffb66882391, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100132, guid: d6dad0fb52ba12f458cc7ffb66882391, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: d6dad0fb52ba12f458cc7ffb66882391, type: 3}
       propertyPath: m_LocalPosition.x

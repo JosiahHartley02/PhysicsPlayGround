@@ -9,24 +9,20 @@ public class VehicleBehavior : MonoBehaviour
     public bool activePlayer = false;
 
     [SerializeField]
-    private ProjectileLauncher launcher;
+    private ProjectileLauncher m_launcher;
 
     //Reference to the Front Axel Acting as a single wheel
     [SerializeField]
-    private SingleWheelVehicleBehavior frontAxel;
+    private SingleWheelVehicleBehavior m_frontAxel;
     //Placeholder Reference to a higher level joint to simulate vehicle turning
     private ConfigurableJoint frontJoint = new ConfigurableJoint();
     //Reference to the Back Axel Acting as a single Wheel
     [SerializeField]
-    private SingleWheelVehicleBehavior rearAxel;
-
-    [SerializeField]
-    private Quaternion _restingPosition = new Quaternion();
-
+    private SingleWheelVehicleBehavior m_rearAxel;
     private void Awake()
     {
         //Get reference to the higher level joint to simulate vehicle turning
-        frontJoint = frontAxel.GetComponent<ConfigurableJoint>();
+        frontJoint = m_frontAxel.GetComponent<ConfigurableJoint>();
     }
     private void Update()
     {
@@ -40,12 +36,11 @@ public class VehicleBehavior : MonoBehaviour
         float InputRight = Input.GetAxis("Horizontal");
         bool Fire = Input.GetButtonDown("Jump");
 
-        if (Fire && launcher.target)
-            launcher.LaunchProjectile();
-
+        if (Fire && m_launcher.target)
+            m_launcher.LaunchProjectile();
         //Now we can use the single wheel behaviors update desired velocity function
-        frontAxel.UpdateDesiredVelocity(InputForward, InputRight);
-        rearAxel.UpdateDesiredVelocity(InputForward, InputRight);
+        m_frontAxel.UpdateDesiredVelocity(InputForward, InputRight);
+        m_rearAxel.UpdateDesiredVelocity(InputForward, InputRight);
 
         ActivePlayerSwitch();
     }

@@ -88,4 +88,5 @@ public class CameraController : MonoBehaviour
         //We set the transform position to be the location of the camera target plus the desired distance from said object
         transform.position = cameraFocusPoint[_currentCameraTarget].position + (currentDistance * -transform.forward);
     }
+
 }
