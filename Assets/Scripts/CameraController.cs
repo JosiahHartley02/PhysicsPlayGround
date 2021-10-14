@@ -41,6 +41,9 @@ public class CameraController : MonoBehaviour
     }
     private void Update()
     {
+        //Checks to see if we should just completely quit
+        if (Input.GetButtonDown("Cancel"))
+            Application.Quit();
         //Check to see what camera we should be focusing on staying in order
         //we check the player to see if the player is active, if so focus on the player
         if (_boxChanController.activePlayer)

@@ -20,6 +20,18 @@ public class TriggerZoneBehavior : MonoBehaviour
     [SerializeField]
     private LiveUntilBehavior[] lifeTimersToStart;
 
+    [Tooltip("Each Text in this list will show itself")]
+    [SerializeField]
+    private ToggleTextBehavior[] textsToToggle;
+
+    [Tooltip("Each Text in this list will toggle itself at a specific time, MUST USE textsToToggleTimers")]
+    [SerializeField]
+    private ToggleTextBehavior[] textsToToggleSmart;
+
+    [Tooltip("Initializes a toggle time in all of the textsToToggleSmart array, MUST USE textsToToggleSmart")]
+    [SerializeField]
+    private float[] textsToToggleTimers;
+
     private void OnTriggerEnter(Collider other)
     {
         //Create a temp rigidBody value to hold the info of the gameObject that collided
@@ -39,8 +51,19 @@ public class TriggerZoneBehavior : MonoBehaviour
                 for (int i = 0; i < jetsToTrigger.Length; i++)
                     jetsToTrigger[i].npc = true;
 
-                for (int i = 0; i < lifeTimersToStart.Length; i++)
-                    lifeTimersToStart[i].ToggleOn();
+                for (int i = 0; i < lifeTimersToStart.Length; i++)                {
+                    lifeTimersToStart[i].ToggleOn(); 
+                }
+                for (int i = 0; i < textsToToggle.Length; i++)
+                    textsToToggle[i].ToggleText();
+
+                for (int i = 0; i < textsToToggleSmart.Length; i++)
+                    textsToToggleSmart[i].ToggleAfter(textsToToggleTimers[i]);
+
+                textsToToggle = new ToggleTextBehavior[0];
+                textsToToggleSmart = new ToggleTextBehavior[0];
+                textsToToggleTimers = new float[0];
+                lifeTimersToStart = new LiveUntilBehavior[0];
             }
     }
 }
